@@ -1,11 +1,43 @@
+<!-- popup.html -->
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My Extension Popup</title>
-  </head>
-  <body>
-    <h1>RaterTime</h1>
-    <button id="myButton">Click Me</button>
-    <script src="popup.js"></script>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="popup.css">
+  <title>Task Time Tracker</title>
+</head>
+<body>
+  <h2>Weekly Task Time Tracker</h2>
+  <div class="tracker">
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>AET</th>
+        </tr>
+      </thead>
+      <tbody id="timeTable">
+        <!-- Days of the week with editable input fields -->
+        <tr><td>Monday</td><td><input id="mondayTime" type="number" step="0.01" min="0" value="0"></td></tr>
+        <tr><td>Tuesday</td><td><input id="tuesdayTime" type="number" step="0.01" min="0" value="0"></td></tr>
+        <tr><td>Wednesday</td><td><input id="wednesdayTime" type="number" step="0.01" min="0" value="0"></td></tr>
+        <tr><td>Thursday</td><td><input id="thursdayTime" type="number" step="0.01" min="0" value="0"></td></tr>
+        <tr><td>Friday</td><td><input id="fridayTime" type="number" step="0.01" min="0" value="0"></td></tr>
+        <tr><td>Saturday</td><td><input id="saturdayTime" type="number" step="0.01" min="0" value="0"></td></tr>
+        <tr><td>Sunday</td><td><input id="sundayTime" type="number" step="0.01" min="0" value="0"></td></tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Total</th>
+          <th id="totalTime">0</th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <!-- Reset Button -->
+  <button id="resetButton">Reset All Times</button>
+
+  <script src="popup.js"></script>
+</body>
 </html>

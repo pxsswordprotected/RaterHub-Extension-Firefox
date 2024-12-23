@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    width: 280px;
+    margin: 0;
+    padding: 10px;
+    background-color: #1e1e1e; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+  }
+  
+  h2 {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #c0392b; /* Dark red accent color for heading */
+  }
+  
+  .tracker table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tracker th {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #c0392b; /* Dark red border for table headers */
+    color: #e0e0e0;
+  }
+  
+  .tracker td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #333; /* Subtle dark border for rows */
+  }
+  
+  input[type="number"] {
+    width: 100px;
+    padding: 4px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 0.9em;
+    color: #e0e0e0; /* Light text inside input */
+    background-color: #333; /* Dark background for input fields */
+    border: 1px solid #c0392b; /* Dark red border for input fields */
+  }
+  
+  tfoot {
+    font-weight: bold;
+    color: #e0e0e0;
+  }
+  
+  #totalTime {
+    color: #c0392b; /* Dark red color for total time display */
+  }
+  
+  button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    background-color: #5c1d15; /* Dark red background for buttons */
+    color: #e0e0e0;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #36130f; /* Slightly lighter dark red for hover effect */
+  }
+  

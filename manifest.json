@@ -1,25 +1,38 @@
 {
-    "manifest_version": 2,
-    "name": "RaterTime",
-    "version": "1.0",
-  
-    "description": "A timer extension suitable for Raterhub workers.",
-  
-    "icons": {
-      "48": "icons/border-48.png"
-    },
+  "manifest_version": 2,
+  "name": "AET Tracker",
+  "version": "1.0",
+  "description": "Tracks AET on specified tasks.",
+  "permissions": ["storage", "activeTab", "tabs", "https://www.raterhub.com/*"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.raterhub.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
 
-    "permissions": ["activeTab"],
-    "browser_action": {
-      "default_popup": "popup.html",
-      "default_icon": "icon.png",
-  
-    "content_scripts": [
-      {
-        "matches": ["*://*.raterhub.com/*"],  
-        "js": ["main.js"]
-      }
-    ]
+  "browser_specific_settings": {
+  "gecko": {
+    "id": "your-extension-id@example.com"
   }
 }
-  
+}
